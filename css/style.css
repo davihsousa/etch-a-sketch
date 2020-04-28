@@ -3,9 +3,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #160c28;
   text-align: center;
+}
+
+main {
   display: grid;
   justify-content: center;
-  grid-template-columns: 1fr;
 }
 
 header {
@@ -18,35 +20,44 @@ header {
 .board,
 .gridElement {
   background: #f3f0f1;
-  /* position: relative; */
-  margin: 12px;
-  border-radius: 32px;
   text-align: center;
-  cursor: pointer;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
   color: #6f6cde;
+  cursor: pointer;
 }
 
 .description {
-  /* max-width: 400px; */
-  /* width: 90%; */
+  width: 250px;
+  margin: 12px;
   height: 100px;
   transition: all 0.1s ease-in-out;
+  border-radius: 32px;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
   line-height: 100px;
   font-size: 32px;
+  justify-self: center;
 }
 
 .board {
-  /* min-width: 400px; */
-  /* width: 90%; */
+  width: 600px;
   height: 600px;
-  transition: all 0.1s ease-in-out;
-  /* line-height: 100px; */
-  font-size: 32px;
+  margin: 12px;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    6px 6px 10px rgba(0, 0, 0, 0.2);
+  display: grid;
 }
 
 .gridElement {
-  width: 25%;
-  height: 150px;
+  border: thin solid #6f6cde61;
+}
+
+.description:hover {
+  opacity: 0.3;
+}
+
+.description:active {
+  opacity: 1;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  color: #79e3b6;
 }
