@@ -44,6 +44,8 @@ function newClass(element) {
 
   if (actualClass.slice(-1) === 't') {
     timesHovered = 0;
+  } else if (actualClass.slice(-2) === '10') {
+    timesHovered = 10;
   } else {
     timesHovered = actualClass.slice(-2);
   }
@@ -53,6 +55,7 @@ function newClass(element) {
   } else if (timesHovered < 10) {
     className = `gridElement0${++timesHovered}`;
   } else {
+    className = 'gridElement10';
     element.style.backgroundColor = 'black';
   }
   return className;
